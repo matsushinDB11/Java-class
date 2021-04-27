@@ -1,14 +1,11 @@
-package Keisan;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Keisan {
+class Keisan {
     private static final int array_size = 10;
     private int[] ten_array = new int[array_size];
-//    private int sp = 0;
     void input () throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         for (int i = 0; i < array_size; i++) {
@@ -22,7 +19,6 @@ public class Keisan {
             sum += i;
         }
         int ave = sum /array_size;
-//        System.out.println(max);
         return ave;
     }
     void output_ave(){
@@ -57,5 +53,17 @@ public class Keisan {
         for (int i : this.ten_array) {
             System.out.println(i);
         }
+    }
+}
+
+
+public class Kadai456 {
+    public static void main(String[] args) throws IOException {
+        Keisan data1 = new Keisan();
+        data1.input();
+        data1.output_ave();
+        data1.output_max();
+        data1.output_min();
+        data1.output_sorted();
     }
 }
