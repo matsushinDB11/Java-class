@@ -4,12 +4,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+class SetException extends Exception {}
+
 public class Ktime {
     private int hour;
     private int minute;
     private int second;
 
-    public void setTime(int h, int m, int s) {
+    public void setTime(int h, int m, int s) throws SetException{
+        if (m >= 60 || m < 0 || s >= 60 || s < 0) {
+            SetException e = new SetException();
+            throw e;
+        }
         this.hour = h;
         this.minute = m;
         this.second = s;
@@ -58,7 +64,12 @@ public class Ktime {
         int m = Integer.parseInt(br.readLine());
         System.out.println("秒を入力");
         int s = Integer.parseInt(br.readLine());
-        this.setTime(h, m, s);
+        try {
+            this.setTime(h, m, s);
+        } catch (SetException e) {
+            System.out.println("入力値が無効です");
+            this.inputTime();
+        }
     }
     public void outputTime() {
         System.out.println(this.hour + "時間");
