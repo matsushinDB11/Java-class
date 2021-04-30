@@ -1,18 +1,19 @@
-package Ktime;
+package Kadai3;
 
-import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
 
 class SetException extends Exception {}
 
-public class Ktime {
+class Ktime {
     private int hour;
     private int minute;
     private int second;
 
     // フィールドを設定
-    public void setTime(int h, int m, int s) throws SetException{
+    public void setTime(int h, int m, int s) throws SetException {
         // 入力値の分または秒が60以上or0未満の場合、例外を送出
         if (m >= 60 || m < 0 || s >= 60 || s < 0) {
             SetException e = new SetException();
@@ -82,5 +83,20 @@ public class Ktime {
         System.out.println(this.hour + "時間");
         System.out.println(this.minute + "分");
         System.out.println(this.second + "秒");
+    }
+}
+
+public class ht19a084_0430 {
+    public static void main(String[] args) throws IOException{
+        Ktime time1 = new Ktime();
+        Ktime time2 = new Ktime();
+        time1.inputTime();
+        time2.inputTime();
+        Ktime time3 = time1.addTime(time2);
+        System.out.println("addTime");
+        time3.outputTime();
+        time3 = time1.minTime(time2);
+        System.out.println("minTime");
+        time3.outputTime();
     }
 }
