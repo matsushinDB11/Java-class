@@ -3,6 +3,10 @@ package Car;
 public class Car {
     private int num;
     private double gas;
+    public Car(){
+        System.out.println("Car クラスのコンストラクタを呼び出しました。");
+    }
+
     public void setNum(int n)
     {
         num = n;
