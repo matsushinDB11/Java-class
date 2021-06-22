@@ -4,7 +4,7 @@ abstract class AbstDisplay {
     abstract void print(String str);
 }
 
-public class Display extends AbstDisplay{
+public class GerLastChar extends AbstDisplay{
     private int length;
     private char moji;
 
