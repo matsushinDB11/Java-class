@@ -1,6 +1,6 @@
 package Kadai01;
 
-public class Car extends Thread{
+public class Car implements Runnable{
     private String name;
     public Car(String nm)
     {
