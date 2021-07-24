@@ -7,9 +7,12 @@ import java.nio.file.Path;
 
 public class Main {
     public static void main(String[] args) throws IOException{
+        // CSVからMusicDBを作成
         MusicData[] MusicDB = inputCSV();
+        // リリース年順でソート
         SortMusicDataByYear sort_music = new SortMusicDataByYear();
         sort_music.SortByYear(MusicDB);
+        // 出力
         outputMusicDBArray(MusicDB);
     }
 
