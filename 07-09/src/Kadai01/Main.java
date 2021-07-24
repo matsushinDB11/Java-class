@@ -18,12 +18,10 @@ public class Main {
 
     private static MusicData[] inputCSV() throws IOException {
         // 入力ファイル名(CSV形式)
-        String filename = "C:\\Users\\motoa\\Documents\\Class\\Java-class\\07-09\\src\\Kadai01\\input.csv";
-//        File file = new File(filename);
-//        Path inputPath = Paths.get("Kadai01/input.csv");
+        String filename = "src/Kadai01/input.csv";
         // 入力ファイルの行数をカウント
-//        long lineCounter = Files.lines(inputPath).count();
-        long lineCounter = 10;
+        long lineCounter = Files.lines(Path.of(filename)).count();
+//        long lineCounter = 10;
         MusicData[] MusicDB = new MusicData[Math.toIntExact(lineCounter)];
         // 入力, MusicDBの作成
         BufferedReader br;
