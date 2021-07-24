@@ -13,5 +13,7 @@ public class Main {
         MusicDB[7].setFields("BABYMETAL DEATH", "BEBYMETAL", "BABYMETAL", 2014);
         MusicDB[8].setFields("サイレントマジョリティー", "欅坂46", "サイレントマジョリティー", 2016);
         MusicDB[9].setFields("キュン", "日向坂46", "キュン", 2019);
+
+
     }
 }
