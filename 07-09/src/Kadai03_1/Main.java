@@ -1,4 +1,4 @@
-package Kadai03;
+package Kadai03_1;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-public class Kadai11_03 {
+public class Main {
 
     private JFrame mainFrame;
     private Container contentPane;
@@ -17,7 +17,7 @@ public class Kadai11_03 {
     private JButton Button_c;
     private JPanel buttonPane1;
 
-    private Kadai11_03(){
+    private Main(){
         mainFrame = new JFrame("課題3");
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.setSize(320, 160);
@@ -44,7 +44,7 @@ public class Kadai11_03 {
      */
     public static void main(String[] args) {
         // コンストラクタを呼び出すのみ
-        new Kadai11_03();
+        new Main();
     }
 
 }
