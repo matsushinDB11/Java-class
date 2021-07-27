@@ -1,15 +1,14 @@
 package Kadai03;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-public class Main {
+public class Main extends Frame{
 
     private JFrame mainFrame;
     private Container contentPane;
@@ -33,9 +32,9 @@ public class Main {
         Button_b = new JButton("ボタンB");
         Button_c = new JButton("ボタンC");
 
-        Button_a.addActionListener(new ViewImage("image_a.jpg"));
-        Button_b.addActionListener(new ViewImage("image_b.jpg"));
-        Button_c.addActionListener(new ViewImage("image_a.jpg"));
+        Button_a.addActionListener(new ViewImage("src/Kadai03/img/image_a.jpg"));
+        Button_b.addActionListener(new ViewImage("src/Kadai03/img/image_b.jpg"));
+        Button_c.addActionListener(new ViewImage("src/Kadai03/img/image_a.jpg"));
 
         // 複数のボタンを配置するためのパネル(buttonPane)を作成
         buttonPane1 = new JPanel();
@@ -46,6 +45,12 @@ public class Main {
         contentPane.add(buttonPane1, BorderLayout.CENTER);
 
         mainFrame.setVisible(true);
+    }
+
+    class SampleWindowListener extends WindowAdapter{
+        public void windowClosing(WindowEvent e) {
+            System.exit(0);
+        }
     }
 
 }
